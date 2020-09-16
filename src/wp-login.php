@@ -38,7 +38,7 @@ if ( force_ssl_admin() && ! is_ssl() ) {
  * @param string   $message  Optional. Message to display in header. Default empty.
  * @param WP_Error $wp_error Optional. The error to pass. Default is a WP_Error instance.
  */
-function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
+function login_header($title = 'Log In', $message = '', $wp_error = null ) {
 	global $error, $interim_login, $action;
 
 	// Don't index any of these forms.
@@ -51,7 +51,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	}
 
 	// Shake it!
-	$shake_error_codes = array( 'empty_password', 'empty_email', 'invalid_email', 'invalidcombo', 'empty_username', 'invalid_username', 'incorrect_password', 'retrieve_password_email_failure' );
+	$shake_error_codes = array( 'empty_password', 'empty_email', 'invalid_email', 'invalidcombo', 'empty_username', 'invalid_username', 'incorrect_password', 'retrieve_password_email_failure');
 	/**
 	 * Filters the error codes array for shaking the login form.
 	 *
@@ -113,7 +113,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = null ) {
 	do_action( 'login_enqueue_scripts' );
 
 	/**
-	 * Fires in the login page header after scripts are enqueued.
+	 * Fires in the login page header after scripts are enqueued
 	 *
 	 * @since 2.1.0
 	 */
